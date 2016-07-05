@@ -93,15 +93,12 @@ code { padding: 2px 5px; }
     color: @color__button--text;
     padding: 10px 20px 8px;
     .transition(all 0.5s ease-out);
+    .border-radius(2px);
 
     //iOS Fixes
-    border-radius: 0;
     -webkit-appearance: none;
     &:hover {
         background-color: darken(@color__button--background--hover, 10%);
-    }
-    &:before, &:after {
-        display: none;
     }
 }
 
@@ -622,7 +619,7 @@ h2 {
 // Masonry Gallery
 // ---------------
 
-.home-page {
+
     .gallery-list {
         .clearfix;
         &:hover li {
@@ -773,7 +770,7 @@ h2 {
            -o-transition-property: left, right, top;
               transition-property: left, right, top;
     }
-}
+
 
 
 

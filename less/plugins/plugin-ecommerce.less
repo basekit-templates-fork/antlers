@@ -36,7 +36,7 @@
     display: inline-block;
     float: left;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     margin-right: 3.33%;
     width: 31%;
     vertical-align: top;
@@ -123,7 +123,7 @@
             margin-right: 0;
             position: absolute;
             right: 10px;
-            top: 38px;
+            top: 30px;
         }
         .form-body {
             position: relative;
@@ -197,11 +197,12 @@ button.ecomproductslist__button {
 
 .product-item-details {
     text-align: center;
+    margin-top: 0;
 
     .product-item-title {
-        margin: 18px 0 5px;
-        color: @color__ecomproductslist-product-title--text;
-        font-size: bkscale(@font__h2--font-size, 0.82);
+        font-family: @font__p--font-family;
+        font-size: @font__p--font-size;
+        font-weight: 400;
         @media @mobile {
             font-size: bkscale(@font__h2--font-size, 0.70);
         }
@@ -211,10 +212,6 @@ button.ecomproductslist__button {
         }
     }
     .product-item-price {
-        color: @color__secondary;
-        font-family: @font__h4--font-family;
-        font-size: @font__h3--font-size;
-        font-weight: @font__h4--font-weight;
         padding-bottom: 0;
     }
 }
@@ -223,6 +220,7 @@ button.ecomproductslist__button {
 .listing-pagination {
     // Pagination Buttons
     .button {
+        height: inherit;
         background-color: lighten(@color__button--background, 35%);
         margin: 30px 0 20px;
         padding: 10px 15px;
@@ -261,283 +259,258 @@ button.ecomproductslist__button {
 // 2. Single Product
 // -------------------------------
 
+// Style for tablet and desktop
 
-.product-article {
-
-    // Inline Image & Content
-    .product-images {
-        display: inline-block;
-        @media @tablet800px {
-            float: initial;
+.ecomproduct {
+    display: inline-block;
+    width: 100%;
+    margin: 30px auto;
+    .image-link,
+    .gallery-item {
+        background-color: transparent;
+    }
+    .product-title {
+        color: @color__ecomproduct-title--text;
+    }
+    .product-price {
+        font-family: @font__p--font-family;
+        font-size: @font__h4--font-size;
+    }
+    .product-article {
+        @media only screen and (min-width: 450px) {
+            float: left;
+            width: 100%;
         }
     }
 
-    .product-content {
-        display: block;
-    }
+    // Product images
+    // --------------
 
-    // Product Image Container
     .product-images {
-        max-height: auto;
+        float: left;
+        margin-bottom: 1em;
         width: 100%;
-
-        // Single Product Image
-        .product-image {
-            display: inline-block;
-            margin-bottom: 25px;
-            width: 80%;
-            vertical-align: top;
-            @media @tablet800px {
-                display: block;
-                width: 100%;
-            }
+        @media only screen and (min-width: 900px) {
+            margin-right: 4%;
+            width: 51%;
         }
         .image-link {
             height: auto;
-            line-height: auto;
-            text-align: left;
-            @media @mobile {
-                background-color: none;
-                height: initial;
-                line-height: initial;
-                max-height: 350px;
-            }
+            background-color: transparent;
+            background-image: none !important;
         }
         .image {
-            max-height: 800px;
-             @media @mobile {
-                background-color: none;
-                height: initial;
-                line-height: initial;
-                max-height: 350px;
+            display: block;
+            max-height: 600px;
+            vertical-align: top;
+            margin: 0 auto;
+            @media only screen and (max-width: 900px) {
+                max-height: 450px;
+            }
+            @media only screen and (max-width: 600px) {
+                max-height: 300px;
+            }
+            @media @mobile {
+                max-height: 250px;
             }
         }
     }
 
-    // Image Gallery Thumbnails
     .product-gallery {
-        display: inline-block;
-        margin: 0 0 0 4%;
-        max-height: 800px;
-        position: relative;
-        overflow: hidden;
-        vertical-align: top;
-        width: 15%;
-        @media @tablet800px {
-            display: block;
-            margin: 10px 0;
-            overflow: visible;
-            width: initial;
-        }
-        .gallery-item {
-            height: auto;
-            line-height: inherit;
-            font-size: 0;
-            margin-bottom: 20px;
-            margin-right: 15px;
-            width: 100%;
-            @media @tablet800px {
-                line-height: 70px;
-                margin-bottom: 15px;
-                height: 70px;
-                width: 70px;
-            }
-            &:last-of-type {
-                margin-right: 0;
+        text-align: center;
+        .image--thumb {
+            max-height: 80px;
+            @media @mobile {
+                max-height: 60px;
             }
         }
     }
 
     // Product Content
+    // ---------------
+
     .product-content {
-        max-width: 80%;
-        margin: 0;
-        @media @tablet800px {
-            margin-left: 0;
-            width: 100%;
-        }
-        @media @mobile {
-            max-width: 100%;
+        @media only screen and (min-width: 900px) {
+            display: inline-block;
+            width: 45%;
         }
     }
 
-    // Product Title
-    .product-title {
-        color: @color__ecomproduct-title--text;
-        font-size: bkscale(@font__h1--font-size, 0.85);
-        padding-bottom: 12px;
-        @media @tablet800px {
-            font-size: bkscale(@font__h1--font-size, 0.8);
-        }
-    }
+    // Product Options
 
-    // Product Price
-    .product-price {
-        color: @color__ecomproduct-price--text;
-        font-size: bkscale(@font__h3--font-size, 1.05);
-    }
+    .product-article {
+        // Product Form Group (Select & Buttons)
+        .product-actions {
+            margin: 20px 0;
+            position: relative;
 
-    // Product Availability
-    .product-availability {
-        display: inline-block;
-        margin: 5px 0 15px;
-        padding: 6px 15px;
-        &.product-availability--unavailable {
-            background-color: fade(#C20E0F, 65%);
-            &:before {
-                color: white;
-                content: "\f071";
-                font-size: 13px;
-                margin: 0px 8px 0 12px;
+            // Variations Wrapper
+            .ecomproduct__fieldset {
+                margin-bottom: 30px;
+                .ecomproduct__form-group {
+                    display: block;
+                }
             }
-            p {
-                color: white;
-                font-size: 15px;
-                padding-left: 20px;
+            .form {
+                display: inline-block;
+                margin-right: 10px;
+                @media @mobile {
+                    width: 100%;
+                }
+            }
+            .form-group {
+                margin-bottom: 0;
+            }
+
+            // Variations Select
+            .ecomproduct__select {
+                padding: 0 10px;
+            }
+
+            .button {
+                height: inherit;
+                margin: 10px 0;
+            }
+
+            // Add to Basket Button
+            button.icon--add:before {
+                content:"";
+                display: none;
+            }
+
+            button.icon--add.added {
+                background: green;
+                &:before {
+                    content: "\f00c";
+                    display: inline;
+                }
+            }
+
+            // View Basket Button
+            .view-basket-wrap a {
+                background-color: fade(@color__secondary, 75%);
+                color: @font-swatch7-color;
+                &:hover {
+                    background-color: fade(@color__secondary, 65%);
+                    color: @font-swatch7-color;
+                }
             }
         }
-    }
 
-    // Product Description
-    .product-description {
-        color: lighten(@font-swatch5-color, 25%);
-        font-size: bkscale(@font__p--font-size, 0.9);
-        padding-bottom: 15px;
-    }
-
-    // Product Form Group (Select & Buttons)
-    .product-actions {
-        margin: 5px 0 20px;
-        position: relative;
-
-        // Variations Wrapper
-        .ecomproduct__fieldset {
-            margin-bottom: 30px;
-            .ecomproduct__form-group {
+        // Inline Cart Buttons
+        .form-group,
+        .product__input,
+        .product-button {
+            display: inline-block;
+            background-color: transparent;
+            @media @mobile {
                 display: block;
             }
         }
-        .form {
+
+        // Add To Basket Button
+        .product__input {
+            margin-top: 20px;
+        }
+
+        // View Basket Button Wrapper
+        .view-basket-wrap {
             display: inline-block;
-            margin-right: 10px;
             @media @mobile {
-                width: 100%;
+                left: initial;
+                margin-top: 15px;
+                position: relative;
             }
-        }
-        .form-group {
-            margin-bottom: 0;
-        }
 
-        // Variations Select
-        .ecomproduct__select {
-            padding: 0 10px;
-        }
-
-        // Add to Basket Button
-        button.icon--add:before {
-            content:"";
-            display: none;
-        }
-
-        button.icon--add.added {
-            background: green;
-            &:before {
-                content: "\f00c";
-                display: inline;
-            }
-        }
-
-        // View Basket Button
-        .view-basket-wrap a {
-            background-color: fade(@color__secondary, 75%);
-            color: @font-swatch7-color;
-            &:hover {
-                background-color: fade(@color__secondary, 65%);
-                color: @font-swatch7-color;
+            // View Basket Button
+            .product__button {
+                background-color: fade(@font-swatch7-background-color, 50%);
+                .transition(.5s all ease-out);
+                &:hover {
+                    background-color: @font-swatch7-background-color;
+                }
             }
         }
     }
 
-    // Inline Cart Buttons
-    .form-group,
-    .product__input,
-    .product-button {
-        display: inline-block;
+    // Remove Background Colour from Images
+    .product-item-image,
+    .product-item-image .image-link,
+    .product-gallery .gallery-item,
+    .product-image .image-link,
+    .basket-item-image .image-link {
         background-color: transparent;
-        @media @mobile {
-            display: block;
-        }
     }
 
-    // Add To Basket Button
-    .product__input {
-        margin-top: 20px;
-    }
-
-    // View Basket Button Wrapper
-    .view-basket-wrap {
-        display: inline-block;
-        @media @mobile {
-            left: initial;
-            margin-top: 15px;
-            position: relative;
+    // Product Category & Tags
+    .product-attributes {
+        margin: 50px 0 20px;
+        p, a {
+            font-family: @font__button--font-family;
+            font-size: bkscale(@font__button--font-size, 0.9);
+            font-weight: @font__h4--font-weight;
+            text-transform: uppercase;
         }
-
-        // View Basket Button
-        .product__button {
-            background-color: fade(@font-swatch7-background-color, 50%);
-            .transition(.5s all ease-out);
+        .product-category,
+        .product-tags {
+            display: inline-block;
+            margin: 0 20px 10px 0;
+        }
+        .tag-link,
+        .category-link {
+            background-color: @color-swatch7;
+            color: @color-swatch5;
+            padding: 2px 8px;
+            .transition(all .5s ease-out);
             &:hover {
-                background-color: @font-swatch7-background-color;
+                background-color: darken(@color-swatch7, 8%);
+                text-decoration: none;
             }
         }
-    }
-}
-
-// Remove Background Colour from Images
-.product-item-image,
-.product-item-image .image-link,
-.product-gallery .gallery-item,
-.product-image .image-link,
-.basket-item-image .image-link {
-    background-color: transparent;
-}
-
-
-// Product Category & Tags
-.product-attributes {
-    margin: 50px 0 20px;
-    p, a {
-        font-family: @font__button--font-family;
-        font-size: bkscale(@font__button--font-size, 0.9);
-        font-weight: @font__h4--font-weight;
-        text-transform: uppercase;
-    }
-    .product-category,
-    .product-tags {
-        display: inline-block;
-        margin: 0 20px 10px 0;
-    }
-    .tag-link,
-    .category-link {
-        background-color: @color-swatch7;
-        color: @color-swatch5;
-        padding: 2px 8px;
-        .transition(all .5s ease-out);
-        &:hover {
-            background-color: darken(@color-swatch7, 8%);
-            text-decoration: none;
+        // Tags Label
+        .product-attribute-title, .tags-title {
+            color: @color-swatch4;
+            padding-right: 5px;
+        }
+        .product-attribute-title:after {
+            content:":";
         }
     }
-    // Tags Label
-    .product-attribute-title, .tags-title {
-        color: @color-swatch4;
-        padding-right: 5px;
+
+}
+
+
+
+// Ecom forms
+
+// Styles are set in 'less > forms-and-buttons.less'
+
+.responsivecolumns {
+    .product-article {
+        float: left;
+        width: 100%;
     }
-    .product-attribute-title:after {
-        content:":";
+    .product-images {
+        float: left;
+        margin-bottom: 1em;
+        width: 100%;
+    }
+    .product-content {
+        width: 100%;
+    }
+    .product-images .image {
+        max-height: 250px;
+    }
+    .product-actions .form .button {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .view-basket-wrap .button {
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
+
 
 
 // -------------------------------
@@ -552,9 +525,6 @@ button.ecomproductslist__button {
     }
     .summary-item-title {
         line-height: 1.6;
-        a {
-            color: @font-swatch5-color;
-        }
     }
     .quantity-wrap {
         text-align: center;
@@ -567,6 +537,9 @@ button.ecomproductslist__button {
     .quantity-field {
         font-size: 14px;
         line-height: 20px;
+    }
+    .order-total {
+        font-family: @font__p--font-family;
     }
     .button--submit {
         border: 0;
@@ -644,7 +617,6 @@ button.ecomproductslist__button {
     top: 0;
     right: 0;
     z-index: 9999;
-    // Remove icon spacing
     &:before {
         margin-right: 0;
     }
@@ -711,6 +683,7 @@ button.ecomproductslist__button {
 // Basket Total
 
 .basket-total {
+    font-family: @font__p--font-family;
     padding-bottom: 20px;
     border-bottom: 1px solid darken(@color__body--background, 8%);
 }
@@ -729,13 +702,9 @@ button.ecomproductslist__button {
 
 .widget__ecombasket {
     .basket-item-name {
-        color: @font-swatch4-color;
-        font-family: @font__h4--font-family;
         font-size: bkscale(@font__h3--font-size, 1.05);
     }
     .basket-item-price {
-        color: @color__secondary;
-        font-family: @font__h4--font-family;
         line-height: 24px;
     }
     .item-quantity {
