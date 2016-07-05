@@ -34,58 +34,58 @@
             "font-weight": "700",
             "line-height": "44px",
             "color": "@color-swatch4",
-            "letter-spacing": "inherit"
+            "letter-spacing": "0px"
         },
         "font2": {
+            "font-family": "\"Playfair Display\", Times New Roman, serif",
+            "font-size": "30px",
+            "font-weight": "700",
+            "line-height": "36px",
+            "color": "@color-swatch4",
+            "letter-spacing": "0px"
+        },
+        "font3": {
             "font-family": "\"Playfair Display\", Times New Roman, serif",
             "font-size": "28px",
             "font-weight": "700",
             "line-height": "36px",
             "color": "@color-swatch4",
-            "letter-spacing": "inherit"
-        },
-        "font3": {
-            "font-family": "\"Playfair Display\", Times New Roman, serif",
-            "font-size": "20px",
-            "font-weight": "700",
-            "line-height": "inherit",
-            "color": "@color-swatch4",
-            "letter-spacing": "inherit"
+            "letter-spacing": "0px"
         },
         "font4": {
             "font-family": "\"Playfair Display\", Times New Roman, serif",
-            "font-size": "18px",
+            "font-size": "24px",
             "font-weight": "700",
-            "line-height": "inherit",
+            "line-height": "34px",
             "color": "@color-swatch4",
-            "letter-spacing": "inherit"
+            "letter-spacing": "0px"
         },
         "font5": {
             "font-family": "\"Work Sans\", Geneva, Tahoma, sans-serif",
-            "font-size": "18px",
-            "font-weight": "inherit",
-            "line-height": "32px",
+            "font-size": "16px",
+            "font-weight": "400",
+            "line-height": "24px",
             "color": "@color-swatch5",
-            "letter-spacing": "inherit"
+            "letter-spacing": "0px"
         },
         "font6": {
             "font-family": "\"Work Sans\", Geneva, Tahoma, sans-serif",
             "font-size": "18px",
             "font-weight": "400",
-            "line-height": "inherit",
+            "line-height": "28px",
             "color": "@color-swatch6",
             "color-hover": "@color-swatch4",
-            "letter-spacing": "inherit",
+            "letter-spacing": "0px",
             "background-color": "@color-swatch1",
             "background-color-hover": "@color-swatch1"
          },
         "font7": {
             "font-family": "\"Work Sans\", Geneva, Tahoma, sans-serif",
-            "font-size": "14px",
-            "font-weight": "700",
-            "line-height": "inherit",
+            "font-size": "16px",
+            "font-weight": "600",
+            "line-height": "26px",
             "color": "@color-swatch7",
-            "letter-spacing": "2px",
+            "letter-spacing": "0px",
             "color-hover": "@color-swatch7",
             "background-color": "@color-swatch3",
             "background-color-hover": "lighten(@color-swatch3, 20%)"
@@ -96,15 +96,15 @@
             "font-weight": "700",
             "line-height": "58px",
             "color": "@color-swatch7",
-            "letter-spacing": "inherit"
+            "letter-spacing": "0px"
         },
         "font9": {
             "font-family": "\"Work Sans\", Geneva, Tahoma, sans-serif",
             "font-size": "20px",
-            "font-weight": "700",
+            "font-weight": "400",
             "line-height": "30px",
             "color": "@color-swatch7",
-            "letter-spacing": "inherit"
+            "letter-spacing": "0px"
         },
         "font10": {
             "font-family": "\"Playfair Display\", Times New Roman, serif",
@@ -112,7 +112,7 @@
             "font-weight": "700",
             "line-height": "inherit",
             "color": "@color-swatch4",
-            "letter-spacing": "1px"
+            "letter-spacing": "0px"
         }
     },
     "styles": {
@@ -183,7 +183,7 @@
             "font__navigation--letter-spacing" : "@font-swatch6-letter-spacing"
         },
         "feature": {
-           "color__feature-headline--text": "@font-swatch8-color",
+            "color__feature-headline--text": "@font-swatch8-color",
             "color__feature-strapline--text": "@font-swatch9-color",
             "color__feature-content--background":"#000000",
             "color__feature-button--text": "@font-swatch8-color",

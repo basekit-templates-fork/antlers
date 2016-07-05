@@ -88,10 +88,10 @@ code { padding: 2px 5px; }
 
 // Buttons
 .button {
+    height: 50px;
     background-color: @color__button--background;
     color: @color__button--text;
     padding: 10px 20px 8px;
-    text-transform: uppercase;
     .transition(all 0.5s ease-out);
 
     //iOS Fixes
@@ -104,6 +104,7 @@ code { padding: 2px 5px; }
         display: none;
     }
 }
+
 
 // Form Elements
 legend { display: none; }
@@ -131,6 +132,7 @@ select,
     font-size: bkscale(@font__p--font-size, 0.88);
     line-height: 1.2;
     height: 50px;
+    background-color: transparent;
 
     //iOS Fix
     //-webkit-appearance: none;
@@ -182,8 +184,6 @@ select::-ms-expand{
 
 // Container
 .template-container {
-    position: absolute;
-    top: 100vh;
     width: 100%;
     background-color: @color__body--background;
 
@@ -192,6 +192,13 @@ select::-ms-expand{
     }
     @media only screen and (max-width: 1024px) {
         background-color: @color__body--background;
+    }
+}
+
+.home-page {
+    @media only screen and (min-width: 1024px) {
+        position: absolute;
+        top: 100vh;
     }
 }
 
@@ -216,7 +223,7 @@ select::-ms-expand{
     flex-direction: column;
     width: 300px;
     height: 100vh;
-    padding: 30px 25px 0;
+    padding: 30px 25px 30px;
     position: fixed;
     overflow-x: hidden;
     overflow-y: auto;
@@ -292,7 +299,7 @@ select::-ms-expand{
     }
     .social-name { display: none; }
     .icon {
-        color: gainsboro;
+        color: fade(@color-swatch4, 40%);
         text-decoration: none!important;
         &:before {
             font-size: 22px;
@@ -394,7 +401,7 @@ select::-ms-expand{
     display: block;
     white-space: normal;
     &:after {
-        border-bottom: 1px solid @color-swatch7;
+        border-bottom: 1px solid darken(@color-swatch7, 10%);
         content: "";
         display: block;
         max-width: 100%;
@@ -480,17 +487,12 @@ select::-ms-expand{
                 transform: translateY(0);
                 .navigation-item--child .item-name {
                     padding: 12px 0;
-                    &:before {
-                        content: "\00a0";
-                        position: relative;
-                    }
                 }
             }
         }
     }
     // Dropdown Item
     .item-name {
-        padding-left: 0;
         .transition(all 0.5s ease-out);
         &:hover {
             color: @color__navigation--text--hover;
@@ -504,7 +506,6 @@ select::-ms-expand{
     }
     &.selected > .item-name {
         color: @color__navigation--text--selected;
-        font-weight: 600;
     }
     // Dropdown Folder
     .navigation-list--children {
@@ -522,10 +523,11 @@ select::-ms-expand{
         -ms-transition:     height 0.75s ease-in-out, opacity 0.75s ease-in-out, visibility 0.75s ease-in-out;
         -o-transition:      height 0.75s ease-in-out, opacity 0.75s ease-in-out, visibility 0.75s ease-in-out;
         -webkit-transition-: height 0.75s ease-in-out, opacity 0.75s ease-in-out, visibility 0.75s ease-in-out;
+        background-color: transparent;
     }
     // Dropdown list items
     .navigation-item--child .item-name {
-        padding: 12px 0 12px 12px;
+        padding: 12px;
     }
 }
 
@@ -539,7 +541,7 @@ select::-ms-expand{
     }
     @media @tablet800px {
         background: transparent;
-        border-bottom: 1px solid @color-swatch7;
+        border-bottom: 1px solid darken(@color-swatch7, 10%);
         color: @color-swatch4;
         display: block;
         font-weight: @font__h4--font-weight;
@@ -575,7 +577,7 @@ div[data-widget-type="feature"] {
 
 div[role="main"] {
     max-width: 1500px;
-    padding: 65px 70px 20px 370px;
+    padding: 50px 70px 20px 370px;
     background-color: @color__body--background;
 
     @media only screen and (max-width: 1024px) {
@@ -781,12 +783,22 @@ h2 {
 
 
 .social {
+    .widget__profile .socialicons .icon:before {
+        font-size: 18px;
+    }
     @media @tablet800px {
         display: block;
-        margin: 30px 0;
+        margin: 30px 0 0;
         text-align: center;
         width: 100%;
-        .socialicons, .companycopyright {
+        .social-item {
+            margin: 0;
+        }
+        .widget__profile .socialicons .icon:before {
+            padding: 12px;
+        }
+        .socialicons,
+        .companycopyright {
             display: block;
         }
     }

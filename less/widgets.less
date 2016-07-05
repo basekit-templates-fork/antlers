@@ -83,15 +83,6 @@
         width: 100%;
         background-size: cover;
 
-
-// test
-    position: fixed;
-  top:0px;
-  left:0px;
-  right:0px;
-  height:50vh;
-
-
         // Overlay
         &:before {
             content: "";
@@ -103,25 +94,32 @@
             left: 0;
             background-color: @color__feature-content--background;
             opacity: 0.3;
-            z-index: -1;
         }
 
-        @media only screen and (min-width: 1025px) {
+        @media only screen and (min-width: 1024px) {
             height: 100vh;
+            //Parallax
+            position: fixed;
+            top:0px;
+            left:0px;
+            right:0px;
+            z-index: 0;
         }
     }
     .content-wrap {
 
-// test
-// position: absolute;
-//   bottom:0px;
-//   left:0px;
-//   right:0px;
+        padding: 20px 20px 20px 370px;
+        @media only screen and (max-width: 1250px) {
+            padding: 20px 20px 20px 395px;
+        }
+        @media only screen and (max-width: 1024px) {
+            padding: 20px 20px 20px 45px;
+        }
+        @media @tablet800px {
+            padding: 20px 25px;
+        }
 
-
-
-
-        // position: relative;
+        position: relative;
         width: 100%;
         vertical-align: bottom;
         display: table-cell;
@@ -131,7 +129,6 @@
     }
     .content-inner-wrap {
         max-width: 800px;
-        margin: 0 auto;
         @media only screen and (max-width : 960px) {
             max-width: 700px;
         }
@@ -155,8 +152,7 @@
     .button {
         width: auto;
         margin: 10px 0;
-        padding: 0 20px;
-        border: 2px solid fade(@color__feature-button--border, 15%);
+        border: 2px solid fade(@color__feature-button--border, 35%);
         font-size: 14px;
         line-height: 24px;
         color: @color__feature-button--text;
@@ -164,13 +160,9 @@
     }
     .button:hover {
         border: 2px solid @color-swatch3;
-        color: @color__feature-button--text;
-    }
-}
-
-@media screen and (max-width : 600px) and (orientation:landscape) {
-    .feature .content-wrap {
-        vertical-align: bottom;
+        color: fade(@color__feature-button--text, 95%);
+        border: 2px solid @color__feature-button--border;
+        background-color: @color__feature-button--background;
     }
 }
 
@@ -811,7 +803,7 @@ button,
         }
     }
     .icon:before {
-        font-size: 20px;
+        font-size: 18px;
         margin-right: 0;
     }
 }
@@ -880,7 +872,7 @@ button,
 
 
 hr.rule {
-    background-color: darken(@color-swatch7, 10%);
+    background-color: darken(@color-swatch7, 15%);
     height: 1px;
     margin: 10px 0 20px;
 }

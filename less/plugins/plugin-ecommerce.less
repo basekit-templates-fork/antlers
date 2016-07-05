@@ -463,6 +463,7 @@ button.ecomproductslist__button {
     .product__input,
     .product-button {
         display: inline-block;
+        background-color: transparent;
         @media @mobile {
             display: block;
         }
@@ -546,9 +547,7 @@ button.ecomproductslist__button {
 
 .widget__ecombasketsummary {
     .cell--header {
-        font-family: @font__h4--font-family;
         font-size: 15px;
-        text-transform: uppercase;
         font-weight: @font__h4--font-weight;
     }
     .summary-item-title {
@@ -614,26 +613,32 @@ button.ecomproductslist__button {
 
 
 // -----------------------------
-// 4. Basket Widget
+// 4.Basket Widget
 // -----------------------------
 
+.basket-item {
+    position: relative;
+    padding-bottom: 20px;
+    border-bottom: 1px solid darken(@color__body--background, 8%);
+}
 
-.basket__basket-item { position: relative; }
-.basket__item-image  { width: 200px; }
+.item-image  { width: 200px; }
 
 // Display basket image and content inline
+
 .basket-item-image,
 .basket-item-details {
     display: inline-block;
     vertical-align: top;
     margin-right: 20px;
-    @media @tablet800px {
+    @media @tablet {
         width: 100%;
         margin-right: 0;
     }
 }
 
 // Item Remove Button
+
 .item-remove {
     position: absolute;
     top: 0;
@@ -644,14 +649,15 @@ button.ecomproductslist__button {
         margin-right: 0;
     }
 }
-
 // Hide button text
+
 .remove-text {
     display: none;
 }
 
 // Basket Image
-.basket__image {
+
+.basket .image {
     max-height: 200px;
     max-width: 200px;
     @media @mobile {
@@ -659,6 +665,61 @@ button.ecomproductslist__button {
     }
 }
 
+// Quantity Field
+
+.quantity-field {
+    background: transparent;
+    padding: 0 10px;
+}
+
+.quantity-wrap {
+    background: transparent;
+    .button--quantity {
+        width: 22px;
+        height: 22px;
+        min-height: inherit;
+        margin: 0;
+        line-height: 0;
+    }
+    // button rounded corners
+    .quantity-minus {
+        -webkit-border-radius: 3px 0 0 3px;
+        -moz-border-radius: 3px 0 0 3px;
+        border-radius: 3px 0 0 3px;
+    }
+    .quantity-plus {
+        -webkit-border-radius: 0 3px 3px 0;
+        -moz-border-radius: 0 3px 3px 0;
+        border-radius: 0 3px 3px 0;
+    }
+    // increase button size for mobile
+    @media @mobile {
+        max-width: 50%;
+        .quantity-field {
+            height: 40px;
+            padding: 9px;
+
+        }
+        .button--quantity {
+            margin: 0;
+            width: 25%;
+            height: 40px;
+        }
+    }
+}
+
+// Basket Total
+
+.basket-total {
+    padding-bottom: 20px;
+    border-bottom: 1px solid darken(@color__body--background, 8%);
+}
+
+// View Basket Button
+
+.view-basket {
+    margin: 20px 0;
+}
 
 
 // -------------------------------
