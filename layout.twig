@@ -23,9 +23,6 @@
 	{% endif %}
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <!--<script src="{{asset('js/ResizeSensor.js')}}"></script>
-    <script src="{{asset('js/ElementQueries.js')}}"></script>-->
-
     <!-- jQuery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
@@ -39,8 +36,10 @@
 
 
 
+
     <!-- load and instantiate ScrollReveal first -->
-  <!-- <script src="//cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.js"></script>
+
+    <script src="{{asset('js/scrollreveal.min.js')}}"></script>
 
     <script>
       window.sr = ScrollReveal();
@@ -57,7 +56,10 @@
       /* Ensure elements load hidden before ScrollReveal runs */
       .sr .bk-zone { visibility: hidden; }
 
-    </style>-->
+    </style>
+
+
+
 
 
 
@@ -109,9 +111,9 @@
 
     <!-- Scroll Reveal Effect -->
     <!-- make reveal calls last -->
-   <!-- <script>
+    <script>
       sr.reveal('.widget', { container: '.bk-zone' });
-    </script>-->
+    </script>
 
 
 
