@@ -585,11 +585,13 @@ div[role="main"] {
 }
 
 div[data-widget-type="feature"] {
-    margin: 0 0 0 180px;
-    @media only screen and (min-width: 1023px) {
-        height: 100vh;
-        position: fixed;
-        margin: 0 0 0 300px;
+    height: 100vh;
+    position: fixed;
+    margin: 0 0 0 300px;
+    @media only screen and (max-width: 1024px) {
+        height: auto;
+        position: relative;
+        margin: 0 0 0 180px;
     }
     @media @tablet800px {
         margin: 0;
@@ -803,7 +805,3 @@ h2 {
     }
 }
 
-
-// New Colour Variables
-
-//@import "@{templateLocal}/less/color-variables.less";
