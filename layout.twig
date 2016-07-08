@@ -31,41 +31,6 @@
 
 	{% include basekit.headScript %}
 
-
-
-
-
-
-
-    <!-- load and instantiate ScrollReveal first -->
-
-    <script src="{{asset('js/scrollreveal.min.js')}}"></script>
-
-    <script>
-      window.sr = ScrollReveal();
-
-      // Add class to <html> if ScrollReveal is supported
-      if (sr.isSupported()) {
-        document.documentElement.classList.add('sr');
-      }
-
-    </script>
-
-    <style>
-
-      /* Ensure elements load hidden before ScrollReveal runs */
-      .sr .bk-zone { visibility: hidden; }
-
-    </style>
-
-
-
-
-
-
-
-
-
 </head>
 <body class="{{ page.backgroundClass }}">
 
@@ -106,16 +71,6 @@
 
 	{% block scripts %}
 	{% endblock %}
-
-
-
-    <!-- Scroll Reveal Effect -->
-    <!-- make reveal calls last -->
-    <script>
-      sr.reveal('.widget', { container: '.bk-zone' });
-    </script>
-
-
 
 
 </body>
