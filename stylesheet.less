@@ -193,9 +193,11 @@ select::-ms-expand{
 }
 
 .home-page {
-    @media only screen and (min-width: 1024px) {
-        position: absolute;
-        top: 120vh;
+    position: absolute;
+    top: 100vh;
+    @media only screen and (max-width: 1024px) {
+        position: relative;
+        top: inherit;
     }
 }
 
