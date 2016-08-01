@@ -1,7 +1,7 @@
 {
     "name": "antlers",
     "thumbnail": "thumbnail.png",
-    "screenshot" : "screenshot.jpg",
+    "screenshot" : "antlers-screenshot.jpg",
     "widgetVersion": 2,
     "tags": {
         "en": ["photography", "design", "portfolio", "gallery", "camera", "images", "technology", "creative", "media"],
