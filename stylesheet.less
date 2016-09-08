@@ -318,6 +318,7 @@ div[data-widget-type="feature"].bk-tpl-hidden + .home-page {
     .social-name { display: none; }
     .icon {
         color: fade(@color-swatch4, 40%);
+        display: block;
         text-decoration: none!important;
         &:before {
             font-size: 22px;
@@ -807,11 +808,9 @@ h2 {
 
 .social {
     .widget__profile .socialicons .icon:before {
-        display: block;
         font-size: 18px;
     }
     @media @tablet800px {
-        display: block;
         margin: 30px 0 0;
         text-align: center;
         width: 100%;
