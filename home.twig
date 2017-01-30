@@ -1,7 +1,7 @@
 {% extends "layout.twig" %}
 {% block content %}
 
-<!-- SIDEBAR -->
+<!-- Sidebar -->
 	{% include "includes/sidebar.twig" %}
 
  <!-- Template Feature Widget -->
@@ -16,6 +16,14 @@
 
 <!-- CONTAINER -->
 <div class="template-container home-page">
+
+	<!-- Ecom Basket -->
+
+	{% if plugins.ecommerce.store.live %}
+		<div class="header-basket">
+		 	{{widget('ecombasket', 'shopbasket', {})|raw}}
+		</div>
+	{% endif %}
 
 	<!-- MAIN SECTION -->
 	<div role="main" id="main">
