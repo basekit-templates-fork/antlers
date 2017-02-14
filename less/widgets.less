@@ -196,29 +196,55 @@
 // --------------
 
 // Gallery & Slideshow
-.image-title {
-    color: @color__image-title--text;
+.gallery {
+    figcaption .image-title {
+        color: @color__gallery-title--text;
+    }
+
+    .image-description {
+        color: @color__gallery-description--text;
+    }
 }
 
-.image-description {
-    color: @color__image-description--text;
+.responsiveslideshow {
+    figcaption .image-title {
+        color: @color__slideshow-title--text;
+    }
+
+    .image-description {
+        color: @color__slideshow-description--text;
+    }
 }
+
+
 
 // Image Widget
-.imagewidget__image-title {
-    color: @color__image-title--text;
+
+.imagewidget figcaption {
+    visibility: visible;
+    transition: none;
+    transform: none;
+    height: auto;
+    opacity: 1;
+    text-align: initial;
 }
 
-.imagewidget__image-description {
+
+.imagewidget figcaption .image-title {
+    color: @color__image-title--text;
+    border: none;
+    padding: 0;
+}
+
+.imagewidget figcaption .image-description {
     color: @color__image-description--text;
     line-height: bkscale(@font__p--line-height, 0.8);
+    display: block;
 }
 
 .imagewidget__caption {
     background-color: @color__image-caption--background;
-    padding: 8px 20px 8px 15px;
-    position: absolute;
-    bottom: 0;
+    padding: 8px 0;
 }
 
 
