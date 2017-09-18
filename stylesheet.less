@@ -396,20 +396,34 @@ div[data-widget-type="feature"].bk-tpl-hidden + .home-page {
             padding: 0;
             opacity: 0;
             visibility: hidden;
-            &.open {
-                height: 100%;
-                padding-bottom: 5px;
-                position: relative;
-                opacity: 1;
-                .transition(opacity 0.5s ease);
-                visibility: visible;
-            }
         }
         .navigation-list {
             margin-top: 0;
             @media @mobile {
                 margin-top: 12px;
             }
+        }
+    }
+
+    @media @tablet800px {
+        &.open .navigation-body {
+            height: 100%;
+            padding-bottom: 5px;
+            position: relative;
+            opacity: 1;
+            .transition(opacity 0.5s ease);
+            visibility: visible;
+        }
+    }
+
+    @media @tablet800px {
+        &.open +.widget-overlay {
+            display: block;
+            top: 50px;
+        }
+
+        + .widget-overlay {
+            display: none;
         }
     }
 }

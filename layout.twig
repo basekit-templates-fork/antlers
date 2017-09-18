@@ -29,15 +29,17 @@
         <!-- Fast Click -->
         <script src="{{asset('js/fastclick.js')}}"></script>
 
+        <script nonce="{{ numberUsedOnce }}">
+            $(document).on("click", ".navigation-toggle", function() {
+                $( ".bk-extendednavigation" ).toggleClass( "open" );
+            });
+        </script>
+
+
     	<!-- Menu Navigation Toggle -->
         <script nonce="{{ numberUsedOnce }}">
     		$(function() {
     		    FastClick.attach(document.body);
-    		});
-
-        	// Toggles class open to display/hide the whole navigation
-        	$( ".navigation-toggle" ).click(function() {
-      			$( ".navigation-body" ).toggleClass( "open" );
     		});
 
         	// Toggles class open to display/hide folders
