@@ -495,8 +495,7 @@ div[data-widget-type="feature"].bk-tpl-hidden + .home-page {
         color: @color__navigation--text--selected;
     }
     .item-name {
-        color: @color__navigation--
-        ;
+        color: @color__navigation--text;
 
         &:hover {
             color: @color__navigation--text--hover;
@@ -580,7 +579,7 @@ div[data-widget-type="feature"].bk-tpl-hidden + .home-page {
     @media @tablet800px {
         background: transparent;
         border-bottom: 1px solid darken(@color-swatch7, 10%);
-        color: @color-swatch4;
+        color: @color__navigation--text;
         display: block;
         font-weight: @font__h4--font-weight;
         padding: 12px 0;
@@ -844,5 +843,11 @@ h2 {
             display: block;
         }
     }
+}
+
+@media @tablet800px {
+    .widget__profile .socialicons .icon {
+	    color: @color__navigation--text;
+	}
 }
 
