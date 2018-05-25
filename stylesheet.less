@@ -193,8 +193,8 @@ select::-ms-expand{
 
 
 div[data-widget-type="feature"] + .home-page {
-    position: absolute;
-    top: 100vh;
+    position: relative;
+    margin-top: 100vh;
     @media only screen and (max-width: 1024px) {
         position: static;
         top: inherit;
@@ -627,8 +627,9 @@ div[role="main"] {
 
 div[data-widget-type="feature"] {
     height: 100vh;
-    position: fixed;
     margin: 0 0 0 300px;
+    position: fixed;
+    top: 0;
     @media only screen and (max-width: 1024px) {
         height: auto;
         position: relative;
@@ -851,3 +852,18 @@ h2 {
 	}
 }
 
+
+
+
+// -----------------------------
+// 7. Footer
+// -----------------------------
+
+
+.gdpr-footer {
+    display: block;
+    margin-left: 25%;
+    max-width: 75%;
+    position: relative;
+    z-index: 1;
+}
