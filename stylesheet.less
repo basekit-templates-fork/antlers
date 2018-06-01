@@ -193,15 +193,17 @@ select::-ms-expand{
 
 
 div[data-widget-type="feature"] + .home-page {
-    position: absolute;
-    top: 100vh;
+    position: relative;
+    margin-top: 100vh;
     @media only screen and (max-width: 1024px) {
+        margin-top: 0;
         position: static;
         top: inherit;
     }
 }
 
 div[data-widget-type="feature"].bk-tpl-hidden + .home-page {
+    margin-top: 0;
     position: static;
     top: inherit;
 }
@@ -627,8 +629,9 @@ div[role="main"] {
 
 div[data-widget-type="feature"] {
     height: 100vh;
-    position: fixed;
     margin: 0 0 0 300px;
+    position: fixed;
+    top: 0;
     @media only screen and (max-width: 1024px) {
         height: auto;
         position: relative;
@@ -851,3 +854,25 @@ h2 {
 	}
 }
 
+
+
+
+// -----------------------------
+// 7. Footer
+// -----------------------------
+
+
+.gdpr-footer {
+    display: block;
+    margin-left: 300px;
+    position: relative;
+    z-index: 1;
+
+    @media only screen and (max-width: 1024px) {
+        margin-left: 180px;
+    }
+
+    @media @tablet800px {
+        margin-left: 0;
+    }
+}
