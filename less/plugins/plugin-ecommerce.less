@@ -388,11 +388,16 @@ button.ecomproductslist__button {
 
             // View Basket Button
             .view-basket-wrap a {
-                background-color: fade(@color__secondary, 75%);
-                color: @font-swatch7-color;
+                background-color: @color__button--background;
+                color: @color__button--text;
+                padding: 10px 20px 8px;
+                .transition(all 0.5s ease-out);
+                .border-radius(2px);
+
+                //iOS Fixes
+                -webkit-appearance: none;
                 &:hover {
-                    background-color: fade(@color__secondary, 65%);
-                    color: @font-swatch7-color;
+                    background-color: darken(@color__button--background--hover, 10%);
                 }
             }
         }
@@ -543,7 +548,6 @@ button.ecomproductslist__button {
     }
     .button--submit {
         border: 0;
-        color: @font-swatch7-color;
         height: auto;
     }
     .image {
