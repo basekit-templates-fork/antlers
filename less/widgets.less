@@ -336,22 +336,31 @@
 
 .responsiveslideshow .caption {
     background-color: fade(@color__slideshow-caption--background, 50%);
-    bottom: 0;
+    bottom: 8px;
+    opacity: 1;
+    height: auto;
     position: absolute;
     left: 0;
-    right: 0;
-    margin: 0 auto;
-    max-width: 80%;
-    padding: 10px 25px;
-    text-align: center;
+    margin: 0;
+    padding: 12px 25px;
+    text-align: left;
     width: auto;
+    visibility: visible;
+
+    @media @mobile {
+        padding: 10px 12px;
+    }
+
     .image-title {
+        border: 0;
         color: @color__slideshow-title--text;
         font-size: bkscale(@font__p--font-size, 1.05);
         line-height: bkscale(@font__p--line-height, 0.95);
+        padding: 0 0 2px;
     }
     .image-description {
         color: darken(@color__slideshow-description--text, 20%);
+        display: block;
         font-size: bkscale(@font__p--font-size, 0.95);
         line-height: bkscale(@font__p--line-height, 0.95);
     }
