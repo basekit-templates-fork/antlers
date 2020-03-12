@@ -11,12 +11,14 @@
     // -----------------------------
 
 
+    // Stop UI being hidden outside of the canvas
     &.edit [role="main"],
     &.edit [data-widget-type="feature"] {
         overflow: visible;
     }
     
     
+    // Contaienr reset
     .template-container,
     [role="main"] {
         max-width: 100%;
@@ -24,6 +26,7 @@
     }
 
 
+    // Offset feature and main zone against the sidebar
     [data-widget-type="feature"],
     [role="main"] {
         margin-left: 300px;
@@ -40,7 +43,8 @@
         }
     }
     
-    
+
+    // Offset feature against the sidebar in edit mode
     &.edit [data-widget-type="feature"] {
         width: ~"calc(100% - 500px)";
         
@@ -54,14 +58,10 @@
     }
     
     
+    // Offset the header basket against the sidebar
     .header-basket {
         margin-left: 300px;
         padding-left: 0;
-        
-        @media only screen and (max-width: 1024px) {
-            margin-left: 200px;
-        }
-        
         
         @media only screen and (max-width: 800px) {
             margin-left: 180px;
@@ -69,6 +69,7 @@
     }
 
 
+    // Reset images stretching in logo and gallery sections
     [data-rowtype*="logo"],
     [data-rowtype*="gallery"] {
         
@@ -78,11 +79,13 @@
     }
     
     
+    // Brings form buttons above inputs inside of sections
     [data-name="row"] .button {
         z-index: 1;
     }
     
     
+    // Fix social buttons in sections
     [data-name="row"] .social-link {
         .align-items(center);
         .flex-display;
@@ -92,6 +95,7 @@
     }
     
     
+    // Move overlay controls away from sidebar
     .row-overlay {
         left: -50px;
         z-index: 2!important;
@@ -103,9 +107,17 @@
     }
     
     
+    // Make slide pagination clickable inside a section
     [data-name="row"] .slide-pagination {
         z-index: 1;
     }
+
+
+    .row--image-text-8a [data-name="gallery"] .gallery__image {
+        display: none;
+    }
+
+
 
 
     // Migration styles
