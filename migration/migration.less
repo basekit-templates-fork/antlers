@@ -11,6 +11,12 @@
     // -----------------------------
 
 
+    &.edit [role="main"],
+    &.edit [data-widget-type="feature"] {
+        overflow: visible;
+    }
+    
+    
     .template-container,
     [role="main"] {
         max-width: 100%;
@@ -22,17 +28,83 @@
     [role="main"] {
         margin-left: 300px;
         width: ~"calc(100% - 300px)";
+        
+        @media only screen and (max-width: 1024px) {
+            margin-left: 180px;
+            width: ~"calc(100% - 180px)";
+        }
+        
+        @media only screen and (max-width: 800px) {
+            margin-left: 0;
+            width: 100%;
+        }
     }
     
     
     &.edit [data-widget-type="feature"] {
         width: ~"calc(100% - 500px)";
+        
+        @media only screen and (max-width: 1024px) {
+            width: ~"calc(100% - 180px)";
+        }
+        
+        @media only screen and (max-width: 800px) {
+            width: 100%;
+        }
     }
     
     
     .header-basket {
         margin-left: 300px;
         padding-left: 0;
+        
+        @media only screen and (max-width: 1024px) {
+            margin-left: 200px;
+        }
+        
+        
+        @media only screen and (max-width: 800px) {
+            margin-left: 180px;
+        }
+    }
+
+
+    [data-rowtype*="logo"],
+    [data-rowtype*="gallery"] {
+        
+        .image {
+            width: auto;
+        }
+    }
+    
+    
+    [data-name="row"] .button {
+        z-index: 1;
+    }
+    
+    
+    [data-name="row"] .social-link {
+        .align-items(center);
+        .flex-display;
+        .justify-content(center);
+        height: 35px;
+        width: 35px;
+    }
+    
+    
+    .row-overlay {
+        left: -50px;
+        z-index: 2!important;
+        
+        &:before,
+        &:after {
+            background: none!important;
+        }
+    }
+    
+    
+    [data-name="row"] .slide-pagination {
+        z-index: 1;
     }
 
 
@@ -49,5 +121,21 @@
         margin-right: auto;
         max-width: 1130px;
         width: 90%;
+    }
+    
+    
+    #page-zones__main > .widget:not([data-name="row"]):first-child {
+        margin-top: 40px;
+    }
+    
+    
+    #page-zones__main > [data-name="row"] + .widget:not([data-name="row"]),
+    #page-zones__main > .widget:not([data-name="row"]) + [data-name="row"]:not(:last-child) {
+        margin-top: 30px;
+    }
+    
+    
+    #page-zones__main > .widget:not([data-name="row"]):last-child {
+        margin-bottom: 40px;
     }
 }

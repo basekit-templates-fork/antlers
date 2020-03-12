@@ -667,6 +667,11 @@ h2 {
 // Masonry Gallery
 // ---------------
 
+[data-name="widget"] .gallery-item .image-link,
+[data-rowtype*=""] .gallery-item .image-link {
+    background-image: none!important;
+}
+
 
     .gallery-list {
         .clearfix;
@@ -718,7 +723,6 @@ h2 {
 
         // Gallery Anchor Link
         .image-link {
-            background-image: none!important;
             height: auto;
             .transition(all 0.5s ease-in-out);
             @media @mobile {
@@ -850,8 +854,8 @@ h2 {
 
 @media @tablet800px {
     .widget__profile .socialicons .icon {
-	    color: @color__navigation--text;
-	}
+        color: @color__navigation--text;
+    }
 }
 
 
