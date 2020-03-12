@@ -1,0 +1,53 @@
+
+// -----------------------------
+// Migration Styles
+// -----------------------------
+
+
+#migrated-site {
+
+
+    // Stylesheet overrides
+    // -----------------------------
+
+
+    .template-container,
+    [role="main"] {
+        max-width: 100%;
+        padding: 0;
+    }
+
+
+    [data-widget-type="feature"],
+    [role="main"] {
+        margin-left: 300px;
+        width: ~"calc(100% - 300px)";
+    }
+    
+    
+    &.edit [data-widget-type="feature"] {
+        width: ~"calc(100% - 500px)";
+    }
+    
+    
+    .header-basket {
+        margin-left: 300px;
+        padding-left: 0;
+    }
+
+
+    // Migration styles
+    // -----------------------------
+
+
+    // Applies spacing to widgets to mimic container width
+    .empty-zone,
+    #page-zones__main:empty,
+    #page-zones__main > .widget:not([data-name="row"]),
+    .row:not(.row--width-no-padding) .row__container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1130px;
+        width: 90%;
+    }
+}

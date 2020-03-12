@@ -3,6 +3,7 @@
     "thumbnail": "thumbnail.png",
     "screenshot" : "antlers-screenshot.jpg",
     "widgetVersion": 2,
+    "versionTenCompatible": 1,
     "tags": {
         "en": ["photography", "design", "portfolio", "gallery", "camera", "images", "technology", "creative", "media"],
         "es": ["fotografía", "diseño", "portafolio", "galería", "cámara", "imágenes", "tecnología", "creativo", "comunicación"],
