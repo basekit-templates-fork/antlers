@@ -61,7 +61,9 @@
     // Offset the header basket against the sidebar
     .header-basket {
         margin-left: 300px;
+        max-width: 100%;
         padding-left: 0;
+        padding-right: 0;
         
         @media only screen and (max-width: 800px) {
             margin-left: 180px;
@@ -113,8 +115,9 @@
     }
 
 
-    .row--image-text-8a [data-name="gallery"] .gallery__image {
-        display: none;
+    // Reset margin
+    .slide-navigation .pause-toggle {
+        margin-top: 0;
     }
 
 
@@ -128,7 +131,8 @@
     .empty-zone,
     #page-zones__main:empty,
     #page-zones__main > .widget:not([data-name="row"]),
-    .row:not(.row--width-no-padding) .row__container {
+    .row:not(.row--width-no-padding) .row__container.
+    .header-basket [data-widget-type="ecombasket"] {
         margin-left: auto;
         margin-right: auto;
         max-width: 1130px;
