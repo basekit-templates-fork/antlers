@@ -79,6 +79,13 @@
             width: auto;
         }
     }
+
+
+    [data-name="row"] [data-name="gallery"] .gallery-item .gallery__caption {
+        margin: 0 auto;
+        height: ~"calc(100% - 24px)";
+        width: ~"calc(100% - 24px)";
+    }
     
     
     // Brings form buttons above inputs inside of sections
@@ -131,7 +138,7 @@
     .empty-zone,
     #page-zones__main:empty,
     #page-zones__main > .widget:not([data-name="row"]),
-    .row:not(.row--width-no-padding) .row__container.
+    .row:not(.row--width-no-padding) .row__container,
     .header-basket [data-widget-type="ecombasket"] {
         margin-left: auto;
         margin-right: auto;
