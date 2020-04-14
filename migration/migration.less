@@ -26,6 +26,12 @@
     }
 
 
+    &.edit [role="main"] {
+        position: relative;
+        z-index: 2;
+    }
+
+
     // Offset feature and main zone against the sidebar
     [data-widget-type="feature"],
     [role="main"] {
@@ -106,8 +112,7 @@
     
     // Move overlay controls away from sidebar
     .row-overlay {
-        left: -50px;
-        z-index: 2!important;
+
         
         &:before,
         &:after {
