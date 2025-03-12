@@ -13,8 +13,7 @@
     	{% endif %}
     	<meta name="viewport" content="width=device-width,initial-scale=1">
 
-        <!-- jQuery -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     	{% include basekit.headScript %}
     </head>
@@ -26,7 +25,6 @@
 
         {% include basekit.bodyScript %}
 
-        <!-- Fast Click -->
         <script src="{{asset('js/fastclick.js')}}"></script>
 
         <script nonce="{{ numberUsedOnce }}">
@@ -35,22 +33,17 @@
             });
         </script>
 
-
-    	<!-- Menu Navigation Toggle -->
         <script nonce="{{ numberUsedOnce }}">
     		$(function() {
     		    FastClick.attach(document.body);
     		});
 
-        	// Toggles class open to display/hide folders
     		$( ".navigation-item.folder" ).each(function() {
     			$( this ).click(function() {
     	  			$( this ).toggleClass( "open" );
     			});
     		});
     	</script>
-
-        <!-- Parallax in feature -->
 
         <script type="text/javascript" nonce="{{ numberUsedOnce }}">
             $(document).scroll(function() {
@@ -60,6 +53,5 @@
 
     	{% block scripts %}
     	{% endblock %}
-
     </body>
 </html>
